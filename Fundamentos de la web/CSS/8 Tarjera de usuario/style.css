@@ -1,0 +1,37 @@
+.card{
+    width: 500px;
+    margin: 40px auto;
+    border: 3px solid #d1d1d1;
+}
+.card-header{
+    height: 75px;
+    background-color: #17a2b8;
+    position: relative;
+    margin-bottom: 50px;
+}
+.profile-picture{
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid #d1d1d1;
+}
+.profile-picture img{
+    height: 80px;
+}
+h2,h4,p{
+    margin-left: 20px;
+}
+h4 img, h5 img{
+    height: 15px;
+}
+h4 img{
+    margin-right: 10px;
+}
+.gear{
+    color: #085394;
+    text-decoration: underline;
+    font-weight: normal;
+}
