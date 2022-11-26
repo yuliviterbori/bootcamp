@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.max-width{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.margin-20{
+    margin-left: 20px;
+}
+.margin-10{
+    margin: 10px;
+}
+.padding-10{
+    padding: 10px;
+}
+header{
+    background-color: black;
+    width: 100%;
+}
+.header-content{
+    display: grid;
+    grid-template-columns: 120px auto 90px;
+    padding: 15px 0;
+    color: white;
+}
+.header-content h1{
+    font-size: 32px;
+}
+.header-menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header-menu li{
+    list-style-type: none;
+    padding: 0 10px;
+}
+.header-menu .active{
+    font-weight: bold;
+}
+.header-content button{
+    background-color: #17a2b8;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+
+}
+.main-content{
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+.main-content-left, .main-content-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card{
+    width: 100%;
+    border: 3px solid #d1d1d1;
+}
+.card-profile-header{
+    height: 75px;
+    background-color: #17a2b8;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.card-profile-picture{
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid #d1d1d1;
+    overflow: hidden;
+}
+.card-profile-picture img{
+    height: 80px;
+}
+.card-profile-city{
+    display: flex;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.card-profile-footer{
+    display: flex;
+    color: #085394;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+.card-profile-city img, .card-profile-footer img{
+    height: 15px;
+    margin-right: 10px;
+}
+
+.card-header{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: #333333;
+    color:
+     white;
+     align-items: center;
+}
+.card-count{
+    border-radius: 50%;
+    background-color: #cccccc;
+    color: #333333;
+    padding: 2px 6px;
+}
+.card-title{
+    font-weight: normal;
+}
+.card-subtitle{
+    color: gray;
+    margin: 10px 0 20px 0;
+}
+.card-picture{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.grid-display{
+    display: grid;
+    grid-template-columns: 40px auto 70px;
+    margin: 10px 0;
+}
+.card-picture img{
+    width: 40px;
+}
+.person-name{
+    font-size: 20px;
+    padding-left: 10px;
+}
+.card-icons{
+    display: flex;
+    gap: 5px;
+}
+.card-icons img{
+    width: 25px;
+    height: 25px;
+}
+.card-footer{
+    color: blue;
+    text-decoration: underline;
+    border-top: 3px solid #d1d1d1;
+}
