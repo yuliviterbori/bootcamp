@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    max-width: 700px;
+    font-family: sans-serif;
+}
+header{
+    background-color: #cccccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+}
+header > input {
+    border: 2px solid black;
+    padding: 5px;
+    width: 400px;
+}
+header > button {
+    padding: 3px 5px;
+    color: white;
+    background-color: #2b78e4;
+}
+button{
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 black;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+.card{
+    width: 100%;
+    border: 2PX solid black;
+    padding: 20px;
+}
+.ninja-card{
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.ninja-card h2{
+    font-size: 30px;
+}
+.ninja-card h4{
+    text-align: center;
+}
+.ninja-card button{
+    background-color: #ffd966;
+    padding: 5px 10px;
+    width: 100%;
+    font-weight: 600;
+}
+.plural{
+    font-size: 12px;
+    margin: 10px 0;
+}
+.link{
+    color: blue;
+    text-decoration: underline;
+}
+.side-card h2{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.side-card h2 > span{
+    font-weight: 700;
+}
+.side-card button{
+    background-color: #93c47d;
+    padding: 5px 10px;
+    width: 100%;
+    font-weight: 600;
+}

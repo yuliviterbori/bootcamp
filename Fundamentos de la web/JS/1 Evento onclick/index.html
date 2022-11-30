@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Evento onclick</title>
+</head>
+<body>
+    <header>
+        <h1>Dojonary</h1>
+        <input placeholder="Search" />
+        <button onclick="login(this)">Login</button>
+    </header>
+    <div class="container">
+        <div>
+            <div class=" card ninja-card">
+                <div>
+                    <h2>ninja</h2>
+                    <h4>noun</h4>
+                    <p class="plural">Plural: <em>ninjas</em></p>
+                    <button onclick="alert('Ninja was liked')">13 likes</button>
+                </div>
+                <p>
+                    A practitioner skilled in the <span class="link">Japanese</span> art of <span class="link">ninjutsu</span>
+                </p>
+            </div>
+            <div class=" card ninja-card">
+                <div>
+                    <h2>ninja</h2>
+                    <h4>noun</h4>
+                    <p class="plural">Plural: <em>ninjas</em></p>
+                    <button onclick="alert('Ninja was liked')">37 likes</button>
+                </div>
+                <p>
+                    A <span class="link">programmer</span> who breaks down problems with <span class="link">zen</span>-like focus
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card side-card">
+                <h2>
+                    Dojonary is defined by <span>YOU</span>
+                </h2>
+                <button onclick="removeBtn(this)">Add Definition</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
