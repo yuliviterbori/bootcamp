@@ -94,6 +94,8 @@ header{
     color: #085394;
     text-decoration: underline;
     margin: 10px 0;
+    background-color: transparent;
+    border: none;
 }
 .card-profile-city img, .card-profile-footer img{
     height: 15px;

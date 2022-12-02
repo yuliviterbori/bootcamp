@@ -14,3 +14,7 @@ function onremove(index){
     request = request -1;
     document.querySelector("#request-count").innerText = request;
 }
+
+function changename(){
+    document.querySelector("#name").innerText = "Yuli V";
+}
