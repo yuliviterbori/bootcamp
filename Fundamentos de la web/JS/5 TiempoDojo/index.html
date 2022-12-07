@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>DojoWeather</h1>
+            <nav>
+                <ul>
+                    <li onclick="alert('Cargando informe meteorológico…')">Burbank</li>
+                    <li onclick="alert('Cargando informe meteorológico…')">Chicago</li>
+                    <li onclick="alert('Cargando informe meteorológico…')">Dallas</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="main-content-header">
+            <h2>San Jose</h2>
+            <form>
+                <label for="select-unit">show temperature in </label>
+                <select id="select-unit" onchange="chooseUnit(this)">
+                    <option value="C">
+                        ºC
+                    </option>
+                    <option value="F"> 
+                        ºF
+                    </option>
+                </select>
+            </form>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" >
+                <p>some rain</p>
+                <div>
+                    <span id="min-0" class="red">24º</span>
+                    <span id="max-0" class="blue">18º</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" >
+                <p>some rain</p>
+                <div>
+                    <span id="min-1" class="red">27º</span>
+                    <span id="max-1" class="blue">19º</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" >
+                <p>some rain</p>
+                <div>
+                    <span id="min-2" class="red">21º</span>
+                    <span id="max-2" class="blue">16º</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" >
+                <p>some rain</p>
+                <div>
+                    <span id="min-3" class="red">26º</span>
+                    <span id="max-3" class="blue">21º</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cookie-box" class="cookie-box">
+        <img src="assets/cookie.png" />
+        <div>
+            <h3>Stop! Cookie time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to anlyse our traffic. <a href="/">Read more...</a></p>
+        </div>
+        <button onclick="closeCookie()">I Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
