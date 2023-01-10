@@ -1,0 +1,10 @@
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  max-width: 500px;
+  text-align: left;
+}
