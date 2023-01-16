@@ -1,0 +1,5 @@
+.container{
+    background-color: aqua;
+    min-height: 300px;
+    grid-area: 2/1/2/1;
+}
