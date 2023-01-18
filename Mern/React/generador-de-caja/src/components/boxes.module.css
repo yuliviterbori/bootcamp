@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.item{
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+}
