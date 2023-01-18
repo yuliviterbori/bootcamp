@@ -1,0 +1,21 @@
+.tabContainer{
+    display: flex;
+    justify-content: center;
+}
+.activeTab{
+    background-color: black;
+    color: white;
+}
+.tab{
+    padding: 10px 15px;
+    text-align: center;
+    width: 100px;
+    border: 1px solif #F2F2F2;
+    margin: 10px;
+}
+.content{
+    border: 1px solid #F2F2F2;
+    width: 400px;
+    margin: 0 auto;
+    min-height: 400px;
+}
