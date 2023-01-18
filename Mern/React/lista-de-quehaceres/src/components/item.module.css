@@ -1,0 +1,23 @@
+.item{
+    width: 500px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 15px;
+}
+.item label{
+    width: 400px;
+    text-align: left;
+}
+.item button{
+    width: 100px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 15px;
+}
+.labeldone{
+    text-decoration: line-through;
+}
