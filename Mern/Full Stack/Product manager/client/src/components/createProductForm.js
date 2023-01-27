@@ -21,21 +21,24 @@ function CreateProductForm() {
     }
     //onChange para actualizar title y description
     return (
-        <form onSubmit={onSubmitHandler}>
-            <p>
-                <label>Title</label><br/>
-                <input type="text" onChange = {(e)=>setFirstName(e.target.value)} value={title}/>
-            </p>
-            <p>
-                <label>Price</label><br/>
-                <input type="number" onChange = {(e)=>setPrice(e.target.value)} value={price}/>
-            </p>
-            <p>
-                <label>Description</label><br/>
-                <textarea type="text" onChange = {(e)=>setLastName(e.target.value)} value={description}/>
-            </p>
-            <input type="submit"/>
-        </form>
+        <div>
+            <h2>Product Manager</h2>
+            <form onSubmit={onSubmitHandler}>
+                <p>
+                    <label>Title</label><br/>
+                    <input type="text" onChange = {(e)=>setFirstName(e.target.value)} value={title}/>
+                </p>
+                <p>
+                    <label>Price</label><br/>
+                    <input type="number" onChange = {(e)=>setPrice(e.target.value)} value={price}/>
+                </p>
+                <p>
+                    <label>Description</label><br/>
+                    <textarea type="text" onChange = {(e)=>setLastName(e.target.value)} value={description}/>
+                </p>
+                <input type="submit"/>
+            </form>
+        </div>
     )
 }
 
