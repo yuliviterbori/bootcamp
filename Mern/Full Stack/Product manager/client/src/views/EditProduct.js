@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import ProductForm from "../components/productForm";
 
 function EditProduct( ) {
-    const [title, setTitle] = useState(""); 
-    const [description, setDescription] = useState("");
-    const [price, setPrice] = useState();
+    const [product, setProduct] = useState(); 
+    const [loaded, setLoaded] = useState(false);
     const navigate = useNavigate();
     const  params = useParams();
     const id = params.id;
@@ -13,40 +13,22 @@ function EditProduct( ) {
     useEffect(() => {
         axios.get('http://localhost:8000/api/product/' + id)
             .then(res => {
-                setTitle(res.data.title);
-                setPrice(res.data.price);
-                setDescription(res.data.description);
+                setProduct(res.data);
+                setLoaded(true);
             })
     }, [id])
-    const updatePerson = e => {
-        e.preventDefault();
-        axios.put('http://localhost:8000/api/product/' + id, {
-            title,
-            price,
-            description
-        })
+    const updateProduct = (data) => {
+        axios.put('http://localhost:8000/api/product/' + id, data)
             .then(res => console.log(res))
             .then(()=> navigate(`/${id}`));
     }
     return (
         <div>
-            <h1>Update a Person</h1>
-            <form onSubmit={updatePerson}>
-                <p>
-                    <label>Title</label><br />
-                    <input type="text" onChange = {(e)=>setTitle(e.target.value)} value={title}/>
-                </p>
-                <p>
-                    <label>Price</label><br />
-                    <input type="number" onChange = {(e)=>setPrice(e.target.value)} value={price}/>
-                </p>
-                <p>
-                    <label>Description</label><br/>
-                    <textarea type="text" onChange = {(e)=>setDescription(e.target.value)} value={description}/>
-                </p>
-                <input type="submit" />
-            </form>
-        </div>
+            <h2>Update a Product</h2>
+            { loaded && (
+                <ProductForm handleSubmit={updateProduct} initialTitle={product?.title} initialDescription={product?.description} initialPrice={product?.price} />
+            )}
+            </div>
     )
 }
 

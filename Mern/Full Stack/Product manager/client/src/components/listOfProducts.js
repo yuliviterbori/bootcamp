@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import DeleteButton from "./deleteButton";
 
 
 function ListOfProducts(  ) {
@@ -11,19 +12,18 @@ function ListOfProducts(  ) {
         .catch(err => console.log("There was an errer getting products", err))
     })
 
-    const deleteProduct = (id) =>{
-        axios.delete(`http://localhost:8000/api/product/${id}`)
-        .then(res => {
-            const newProducts = products.filter(pro => pro._id!==id);
-            setProducts(newProducts)
-        })
+    const onDelete = (productId) =>{
+        const newProducts = products.filter(pro => pro._id!==productId);
+        setProducts(newProducts)
     }
 
     return ( <div>
         <h2>All Products:</h2>
-        { products.map(pro => (<div><Link to={`/${pro._id}`}>
+        { products.map(pro => (<div key={pro._id}><Link to={`/${pro._id}`}>
         { pro.title }
-        </Link><button onClick={()=>deleteProduct(pro._id)}>Delete</button></div>
+        </Link>
+        <DeleteButton productId={pro._id} onDelete={onDelete} />
+        </div>
         ))}
     </div> );
 }
