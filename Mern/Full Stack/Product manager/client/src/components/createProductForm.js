@@ -3,8 +3,8 @@ import axios from 'axios'
 
 function CreateProductForm() {
     // mantener el control de lo que se escribe a través del gancho useState
-    const [title, setFirstName] = useState(""); 
-    const [description, setLastName] = useState("");
+    const [title, setTitle] = useState(""); 
+    const [description, setDescription] = useState("");
     const [price, setPrice] = useState();
     //gestor cuando se envía el formulario
     const onSubmitHandler = e => {
@@ -26,7 +26,7 @@ function CreateProductForm() {
             <form onSubmit={onSubmitHandler}>
                 <p>
                     <label>Title</label><br/>
-                    <input type="text" onChange = {(e)=>setFirstName(e.target.value)} value={title}/>
+                    <input type="text" onChange = {(e)=>setTitle(e.target.value)} value={title}/>
                 </p>
                 <p>
                     <label>Price</label><br/>
@@ -34,7 +34,7 @@ function CreateProductForm() {
                 </p>
                 <p>
                     <label>Description</label><br/>
-                    <textarea type="text" onChange = {(e)=>setLastName(e.target.value)} value={description}/>
+                    <textarea type="text" onChange = {(e)=>setDescription(e.target.value)} value={description}/>
                 </p>
                 <input type="submit"/>
             </form>
