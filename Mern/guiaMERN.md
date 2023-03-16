@@ -35,13 +35,17 @@ mkdir routes
 npm install express mongoose
 npm install -g nodemon
 npm install cors # para solicitudes de origen cruzado
+npm i bcrypt # para encriptar contrasenas
+npm install jsonwebtoken
+npm install cookie-parser
+npm install dotenv
 ```
 Crear el archivo index.js como el ejemplo
 ```
 const express = require('express');
 const cors = require('cors');
 const app = express();
-require('./server/config/mongoose.config');
+require('./config/mongoose.config');
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
@@ -57,8 +61,9 @@ _Salir de server e ir a la carpeta client, instalar axios_
 
 ```
 cd ../client
-npm install axios
+npm install axios react-router-dom
 ```
+_Crear rutas [ejemplo](https://www.w3schools.com/react/react_router.asp)_
 
 ## Base de datos 
 
